@@ -1,0 +1,12 @@
+# Folders
+**/*node_modules
+**/*build
+**/*target
+database/
+
+
+# Files
+**/*.env
+
+# Include
+!sample.env
