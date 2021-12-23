@@ -2,9 +2,16 @@ import { useContext, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { SocketContext } from "./store/SocketContext";
 // Pages
-import { Home, NotFound, SignIn, SignOut, SignUp } from "./pages";
+import {
+	ActiveSession,
+	Classroom,
+	NotFound,
+	SignIn,
+	SignOut,
+	SignUp,
+} from "./pages";
 // Components
-import { Layout } from "./components";
+import { Layout, Notification } from "./components";
 
 function App() {
 	const socket = useContext(SocketContext);
@@ -21,13 +28,15 @@ function App() {
 		<div className="App">
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route index element={<Home />} />
+					<Route index element={<ActiveSession />} />
+					<Route path="/classroom" element={<Classroom />} />
 					<Route path="/sign_out" element={<SignOut />} />
 					<Route path="*" element={<NotFound />} />
 				</Route>
 				<Route path="/sign_in" element={<SignIn />} />
 				<Route path="/sign_up" element={<SignUp />} />
 			</Routes>
+			<Notification />
 		</div>
 	);
 }
