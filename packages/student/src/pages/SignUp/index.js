@@ -49,7 +49,7 @@ export default function SignUp() {
 						/>
 						<label
 							className="form-check-label inline-block text-gray-800"
-							for="exampleCheck25"
+							htmlFor="exampleCheck25"
 						>
 							តាមដានព័ត៌មានថ្មីៗរបស់យើង
 						</label>

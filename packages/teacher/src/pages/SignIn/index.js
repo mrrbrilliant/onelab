@@ -8,7 +8,7 @@ export default function SignIn() {
 				<form>
 					<div className="form-group mb-6">
 						<label
-							for="exampleInputEmail2"
+							htmlFor="exampleInputEmail2"
 							className="form-label inline-block mb-2 text-gray-700"
 						>
 							អ៊ីម៉ែល
@@ -23,7 +23,7 @@ export default function SignIn() {
 					</div>
 					<div className="form-group mb-6">
 						<label
-							for="exampleInputPassword2"
+							htmlFor="exampleInputPassword2"
 							className="form-label inline-block mb-2 text-gray-700"
 						>
 							លេខសម្ងាត់
@@ -44,7 +44,7 @@ export default function SignIn() {
 							/>
 							<label
 								className="form-check-label inline-block text-gray-800"
-								for="exampleCheck2"
+								htmlFor="exampleCheck2"
 							>
 								ចំណាំខ្ញុំ
 							</label>

@@ -2,26 +2,26 @@ import React from "react";
 
 export default function Notification() {
 	return (
-		<div class="absolute top-0 right-0 p-4 flex flex-col justify-center"></div>
+		<div className="absolute top-0 right-0 p-4 flex flex-col justify-center"></div>
 	);
 }
 
 const NormalNotification = () => (
 	<div
-		class="bg-white shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block"
+		className="bg-white shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block"
 		id="static-example"
 		role="alert"
 		aria-live="assertive"
 		aria-atomic="true"
 		data-mdb-autohide="false"
 	>
-		<div class=" bg-white flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-gray-200 rounded-t-lg">
-			<p class="font-bold text-gray-500">MDBootstrap</p>
-			<div class="flex items-center">
-				<p class="text-gray-600 text-xs">11 mins ago</p>
+		<div className=" bg-white flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-gray-200 rounded-t-lg">
+			<p className="font-bold text-gray-500">MDBootstrap</p>
+			<div className="flex items-center">
+				<p className="text-gray-600 text-xs">11 mins ago</p>
 				<button
 					type="button"
-					class=" btn-close box-content w-4 h-4 ml-2 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+					className=" btn-close box-content w-4 h-4 ml-2 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
 					data-mdb-dismiss="toast"
 					aria-label="Close"
 				>
@@ -29,7 +29,7 @@ const NormalNotification = () => (
 				</button>
 			</div>
 		</div>
-		<div class="p-3 bg-white rounded-b-lg break-words text-gray-700">
+		<div className="p-3 bg-white rounded-b-lg break-words text-gray-700">
 			Static Example
 		</div>
 	</div>
@@ -37,21 +37,21 @@ const NormalNotification = () => (
 
 const ErrorNotification = () => (
 	<div
-		class="bg-red-600 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
+		className="bg-red-600 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
 		id="static-example"
 		role="alert"
 		aria-live="assertive"
 		aria-atomic="true"
 		data-mdb-autohide="false"
 	>
-		<div class="bg-red-600 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-red-500 rounded-t-lg">
-			<p class="font-bold text-white flex items-center">
+		<div className="bg-red-600 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-red-500 rounded-t-lg">
+			<p className="font-bold text-white flex items-center">
 				<svg
 					aria-hidden="true"
 					focusable="false"
 					data-prefix="fas"
 					data-icon="times-circle"
-					class="svg-inline--fa fa-times-circle w-4 h-4 mr-2 fill-current"
+					className="svg-inline--fa fa-times-circle w-4 h-4 mr-2 fill-current"
 					role="img"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 512 512"
@@ -63,11 +63,11 @@ const ErrorNotification = () => (
 				</svg>
 				MDBootstrap
 			</p>
-			<div class="flex items-center">
-				<p class="text-white opacity-90 text-xs">11 mins ago</p>
+			<div className="flex items-center">
+				<p className="text-white opacity-90 text-xs">11 mins ago</p>
 				<button
 					type="button"
-					class="btn-close btn-close-white box-content w-4 h-4 ml-2 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-white hover:opacity-75 hover:no-underline"
+					className="btn-close btn-close-white box-content w-4 h-4 ml-2 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-white hover:opacity-75 hover:no-underline"
 					data-mdb-dismiss="toast"
 					aria-label="Close"
 				>
@@ -75,7 +75,7 @@ const ErrorNotification = () => (
 				</button>
 			</div>
 		</div>
-		<div class="p-3 bg-red-600 rounded-b-lg break-words text-white">
+		<div className="p-3 bg-red-600 rounded-b-lg break-words text-white">
 			Hello, world! This is a toast message.
 		</div>
 	</div>
@@ -83,21 +83,21 @@ const ErrorNotification = () => (
 
 const WarningNotification = () => (
 	<div
-		class="bg-yellow-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
+		className="bg-yellow-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
 		id="static-example"
 		role="alert"
 		aria-live="assertive"
 		aria-atomic="true"
 		data-mdb-autohide="false"
 	>
-		<div class="bg-yellow-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-yellow-400 rounded-t-lg">
-			<p class="font-bold text-white flex items-center">
+		<div className="bg-yellow-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-yellow-400 rounded-t-lg">
+			<p className="font-bold text-white flex items-center">
 				<svg
 					aria-hidden="true"
 					focusable="false"
 					data-prefix="fas"
 					data-icon="exclamation-triangle"
-					class="svg-inline--fa fa-exclamation-triangle w-4 h-4 mr-2 fill-current"
+					className="svg-inline--fa fa-exclamation-triangle w-4 h-4 mr-2 fill-current"
 					role="img"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 576 512"
@@ -109,11 +109,11 @@ const WarningNotification = () => (
 				</svg>
 				MDBootstrap
 			</p>
-			<div class="flex items-center">
-				<p class="text-white opacity-90 text-xs">11 mins ago</p>
+			<div className="flex items-center">
+				<p className="text-white opacity-90 text-xs">11 mins ago</p>
 				<button
 					type="button"
-					class="btn-close btn-close-white box-content w-4 h-4 ml-2 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-white hover:opacity-75 hover:no-underline"
+					className="btn-close btn-close-white box-content w-4 h-4 ml-2 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-white hover:opacity-75 hover:no-underline"
 					data-mdb-dismiss="toast"
 					aria-label="Close"
 				>
@@ -121,7 +121,7 @@ const WarningNotification = () => (
 				</button>
 			</div>
 		</div>
-		<div class="p-3 bg-yellow-500 rounded-b-lg break-words text-white">
+		<div className="p-3 bg-yellow-500 rounded-b-lg break-words text-white">
 			Hello, world! This is a toast message.
 		</div>
 	</div>
@@ -129,21 +129,21 @@ const WarningNotification = () => (
 
 const SuccessNotification = () => (
 	<div
-		class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
+		className="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
 		id="static-example"
 		role="alert"
 		aria-live="assertive"
 		aria-atomic="true"
 		data-mdb-autohide="false"
 	>
-		<div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-			<p class="font-bold text-white flex items-center">
+		<div className="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
+			<p className="font-bold text-white flex items-center">
 				<svg
 					aria-hidden="true"
 					focusable="false"
 					data-prefix="fas"
 					data-icon="check-circle"
-					class="svg-inline--fa fa-check-circle w-4 h-4 mr-2 fill-current"
+					className="svg-inline--fa fa-check-circle w-4 h-4 mr-2 fill-current"
 					role="img"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 512 512"
@@ -155,11 +155,11 @@ const SuccessNotification = () => (
 				</svg>
 				MDBootstrap
 			</p>
-			<div class="flex items-center">
-				<p class="text-white opacity-90 text-xs">11 mins ago</p>
+			<div className="flex items-center">
+				<p className="text-white opacity-90 text-xs">11 mins ago</p>
 				<button
 					type="button"
-					class="btn-close btn-close-white box-content w-4 h-4 ml-2 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-white hover:opacity-75 hover:no-underline"
+					className="btn-close btn-close-white box-content w-4 h-4 ml-2 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-white hover:opacity-75 hover:no-underline"
 					data-mdb-dismiss="toast"
 					aria-label="Close"
 				>
@@ -167,7 +167,7 @@ const SuccessNotification = () => (
 				</button>
 			</div>
 		</div>
-		<div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
+		<div className="p-3 bg-green-500 rounded-b-lg break-words text-white">
 			Hello, world! This is a toast message.
 		</div>
 	</div>
@@ -175,21 +175,21 @@ const SuccessNotification = () => (
 
 const InfoNotification = () => (
 	<div
-		class="bg-blue-600 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
+		className="bg-blue-600 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
 		id="static-example"
 		role="alert"
 		aria-live="assertive"
 		aria-atomic="true"
 		data-mdb-autohide="false"
 	>
-		<div class="bg-blue-600 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-blue-500 rounded-t-lg">
-			<p class="font-bold text-white flex items-center">
+		<div className="bg-blue-600 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-blue-500 rounded-t-lg">
+			<p className="font-bold text-white flex items-center">
 				<svg
 					aria-hidden="true"
 					focusable="false"
 					data-prefix="fas"
 					data-icon="info-circle"
-					class="svg-inline--fa fa-info-circle w-4 h-4 mr-2 fill-current"
+					className="svg-inline--fa fa-info-circle w-4 h-4 mr-2 fill-current"
 					role="img"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 512 512"
@@ -201,11 +201,11 @@ const InfoNotification = () => (
 				</svg>
 				MDBootstrap
 			</p>
-			<div class="flex items-center">
-				<p class="text-white opacity-90 text-xs">11 mins ago</p>
+			<div className="flex items-center">
+				<p className="text-white opacity-90 text-xs">11 mins ago</p>
 				<button
 					type="button"
-					class="btn-close btn-close-white box-content w-4 h-4 ml-2 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-white hover:opacity-75 hover:no-underline"
+					className="btn-close btn-close-white box-content w-4 h-4 ml-2 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-white hover:opacity-75 hover:no-underline"
 					data-mdb-dismiss="toast"
 					aria-label="Close"
 				>
@@ -213,7 +213,7 @@ const InfoNotification = () => (
 				</button>
 			</div>
 		</div>
-		<div class="p-3 bg-blue-600 rounded-b-lg break-words text-white">
+		<div className="p-3 bg-blue-600 rounded-b-lg break-words text-white">
 			Hello, world! This is a toast message.
 		</div>
 	</div>
