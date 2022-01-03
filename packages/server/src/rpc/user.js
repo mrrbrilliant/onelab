@@ -1,7 +1,5 @@
 const jwt = require("jsonwebtoken");
 
-// const { GraphQLObjectType, GraphQLList, GraphQLString } = require("graphql");
-// const { String, ID, IDNonNull, StringNonNull } = require("./types");
 const { hash_password, compare_password } = require("./helper");
 const { USER, PROFILE } = require("../models");
 const { Error } = require("./status");
@@ -23,97 +21,97 @@ const { Error } = require("./status");
 
 // Query functions
 const getUserByID = async ({ id }) => {
-  return await USER.findOne({ _id: id });
+	return await USER.findOne({ _id: id });
 };
 
 const getAllUsers = async () => {
-  return await USER.find();
+	return await USER.find();
 };
 
 const getUserByEmail = async ({ email }) => {
-  return await USER.findOne({ email: email });
+	return await USER.findOne({ email: email });
 };
 
 // Mutation functions
 const signUp = async ({ email, password }) => {
-  let hashed_password = hash_password(password);
-  let user = new USER({ email, password: hashed_password });
-  return await user.save();
+	let hashed_password = hash_password(password);
+	let user = new USER({ email, password: hashed_password });
+	return await user.save();
 };
 
 const changePassword = async (
-  { email, current_password, new_password },
-  context
+	{ email, current_password, new_password },
+	context
 ) => {
-  const current_user = await getUserByEmail({ email: email });
+	const current_user = await getUserByEmail({ email: email });
 
-  if (current_user === null) {
-    throw new Error("User not found!");
-  }
+	if (current_user === null) {
+		throw new Error("User not found!");
+	}
 
-  const compared_password_result = compare_password(
-    current_user,
-    current_password
-  );
+	const compared_password_result = compare_password(
+		current_user,
+		current_password
+	);
 
-  if (!compared_password_result) {
-    throw new Error("Invalid password");
-  }
+	if (!compared_password_result) {
+		throw new Error("Invalid password");
+	}
 
-  let hashed_password = hash_password(new_password);
+	let hashed_password = hash_password(new_password);
 
-  let filter = { email: email };
-  let update = { password: hashed_password };
+	let filter = { email: email };
+	let update = { password: hashed_password };
 
-  return await USER.findOneAndUpdate(filter, update, { upsert: true });
+	return await USER.findOneAndUpdate(filter, update, { upsert: true });
 };
 
 const signIn = async ({ email, password }) => {
-  try {
-    const current_user = await getUserByEmail({ email: email });
+	try {
+		const current_user = await getUserByEmail({ email: email });
 
-    if (current_user === null) {
-      throw "User not found!";
-    }
+		if (current_user === null) {
+			throw "User not found!";
+		}
 
-    const compared_password_result = compare_password(current_user, password);
+		const compared_password_result = compare_password(current_user, password);
 
-    if (!compared_password_result) {
-      throw "Invalid password";
-    }
+		if (!compared_password_result) {
+			throw "Invalid password";
+		}
 
-    return jwt.sign({ id: current_user._id, email }, process.env.SECRET);
-  } catch (e) {
-    throw e;
-  }
+		return jwt.sign({ id: current_user._id, email }, process.env.SECRET);
+	} catch (e) {
+		throw e;
+	}
 };
 
 const removeUser = async ({ email, password }) => {
-  const current_user = await getUserByEmail({ email: email });
+	const current_user = await getUserByEmail({ email: email });
 
-  if (current_user === null) {
-    throw new Error("User not found!");
-  }
+	if (current_user === null) {
+		throw new Error("User not found!");
+	}
 
-  const compared_password_result = compare_password(current_user, password);
+	const compared_password_result = compare_password(current_user, password);
 
-  if (!compared_password_result) {
-    throw new Error("Invalid password");
-  }
+	if (!compared_password_result) {
+		throw new Error("Invalid password");
+	}
 
-  let removed_user = await USER.deleteOne({ email: email });
+	let removed_user = await USER.deleteOne({ email: email });
 
-  if (removed_user === null) {
-    throw new Error("Failed to remove user");
-  }
+	if (removed_user === null) {
+		throw new Error("Failed to remove user");
+	}
 
-  return "User removed";
+	return "User removed";
 };
 
 module.exports = {
-  signUp,
-  signIn,
-  getAllUsers,
+	signUp,
+	signIn,
+	getAllUsers,
 };
 
 // const UserQueries = {

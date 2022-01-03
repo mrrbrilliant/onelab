@@ -13,20 +13,20 @@ const { security_guard } = require("./helper");
 // });
 
 const getMyWorkspaces = async () => {
-  // await security_guard(args, {
-  //   athentication: true,
-  //   authorization: true,
-  // });
-  // return null;
-  return await SCHOOL.find();
+	// await security_guard(args, {
+	//   athentication: true,
+	//   authorization: true,
+	// });
+	// return null;
+	return await SCHOOL.find();
 };
 
 const getWorkspaceByID = async ({ id }) => {
-  return await SCHOOL.findById(id);
+	return await SCHOOL.findById(id);
 };
 
 const getWorkspaceByName = async ({ name }) => {
-  return await SCHOOL.findOne({ name: name });
+	return await SCHOOL.findOne({ name: name });
 };
 
 const isMember = async () => {};
@@ -34,53 +34,53 @@ const isMember = async () => {};
 const isValidAction = () => {};
 
 const createWorkspace = async (args) => {
-  // let auth = false;
-  // try {
-  // 	security_guard(args, {
-  // 		athentication: true,
-  // 		authorization: true,
-  // 	}).then((msg) => {
-  // 		console.log(msg);
-  // 	});
-  // } catch (error) {
-  // 	throw new GraphQLError(error);
-  // }
+	// let auth = false;
+	// try {
+	// 	security_guard(args, {
+	// 		athentication: true,
+	// 		authorization: true,
+	// 	}).then((msg) => {
+	// 		console.log(msg);
+	// 	});
+	// } catch (error) {
+	// 	throw new GraphQLError(error);
+	// }
 
-  // let authenicated = false;
-  // let ctx = {};
-  // return security_guard(args, {
-  //   athentication: true,
-  //   authorization: true,
-  // })
-  //   .then(async (msg) => {
-  //     if (msg) {
-  //       let new_ws = new SCHOOL({ ...args });
-  //       return await new_ws.save();
-  //     }
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //     return new Error(error);
-  //   });
+	// let authenicated = false;
+	// let ctx = {};
+	// return security_guard(args, {
+	//   athentication: true,
+	//   authorization: true,
+	// })
+	//   .then(async (msg) => {
+	//     if (msg) {
+	//       let new_ws = new SCHOOL({ ...args });
+	//       return await new_ws.save();
+	//     }
+	//   })
+	//   .catch((error) => {
+	//     console.log(error);
+	//     return new Error(error);
+	//   });
 
-  let new_ws = new SCHOOL({ ...args });
-  return await new_ws.save();
+	let new_ws = new SCHOOL({ ...args });
+	return await new_ws.save();
 };
 
 const updateWorkspace = async (args) => {
-  let { id, ...update } = args;
-  await SCHOOL.findOneAndUpdate({ id }, { ...update });
-  return await SCHOOL.findById(id);
+	let { id, ...update } = args;
+	await SCHOOL.findOneAndUpdate({ id }, { ...update });
+	return await SCHOOL.findById(id);
 };
 
 const removeWorkspace = async ({ id }) => {
-  return await SCHOOL.findOneAndRemove({ _id: id });
+	return await SCHOOL.findOneAndRemove({ _id: id });
 };
 
 module.exports = {
-  createWorkspace,
-  removeWorkspace,
-  getMyWorkspaces,
+	createWorkspace,
+	removeWorkspace,
+	getMyWorkspaces,
 };
 
 // const WorkspaceQueries = {
